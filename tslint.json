@@ -1,0 +1,34 @@
+{
+  "defaultSeverity": "error",
+  "jsRules": {},
+  "extends": [
+    "tslint:recommended",
+    "tslint-config-prettier"
+  ],
+  "rules": {
+    "object-literal-sort-keys": false,
+    "member-access": false,
+    "ordered-imports": false /* 屏蔽按字母排序的限制 */,
+    "member-ordering": false /* 屏蔽按字母排序的限制 */,
+    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore", "allow-pascal-case"],
+    "no-trailing-whitespace": {
+      "options": [ true, "ignore-comments"],
+      "severity": "warning"
+    } /* 减少不必要的空格 减少文件体积 */,
+    "no-consecutive-blank-lines": {
+      "options": true,
+      "severity": "warning"
+    } /* 避免多余的空行 */,
+    "eofline": {
+      "options": true,
+      "severity": "warning"
+    } /* 文件末尾加空行 */,
+    "semicolon": {
+      "options": [true, "always", "ignore-interfaces", "ignore-bound-class-methods"],
+      "severity": "warning"
+    } /* 要求分号 */
+  },
+  "linterOptions": {
+    "exclude": ["**/*.js"]
+  }
+}

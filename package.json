@@ -1,0 +1,51 @@
+{
+  "name": "storage",
+  "version": "1.0.0",
+  "description": "manage files",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "build": "tsc ./server/index.ts",
+    "dev": "node ./server/index.js",
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zxydaisy/storage.git"
+  },
+  "keywords": [
+    "filebrowser"
+  ],
+  "author": "zxydasiy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zxydaisy/storage/issues"
+  },
+  "homepage": "https://github.com/zxydaisy/storage#readme",
+  "dependencies": {
+    "@types/graphql": "^0.13.3",
+    "@types/react": "^16.4.7",
+    "@types/react-dom": "^16.0.6",
+    "apollo-cache-inmemory": "^1.1.5",
+    "apollo-client": "^2.3.7",
+    "apollo-link": "^1.2.1",
+    "apollo-link-error": "^1.0.7",
+    "apollo-link-http": "^1.5.3",
+    "apollo-link-ws": "^1.0.8",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "graphql": "0.11.7",
+    "parcel-bundler": "^1.9.7",
+    "react": "^16.4.2",
+    "react-apollo": "^2.1.9",
+    "react-dom": "^16.4.2",
+    "subscriptions-transport-ws": "^0.9.14",
+    "supervisor": "^0.12.0",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.14.0",
+    "typescript": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^10.5.5"
+  }
+}
