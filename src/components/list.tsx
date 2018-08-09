@@ -1,12 +1,31 @@
 
 import { Component } from 'react';
 import * as React from "react";
+import gql from 'graphql-tag';
+import { Query, graphql, compose } from 'react-apollo';;
+
+const HELLO = gql`
+  {
+    hello
+  }
+`;
 
 interface IProps {
-  name?: any
+  hello?: any
 }
+
+@compose(
+  graphql(HELLO, {
+    name: "hello"
+  })
+)
 export default class Index extends Component<IProps, {}> {
   render() {
-    return <div >1112</div>;
+    const { hello } = this.props;
+    console.log(hello);
+
+    return <div >
+      {hello.hello}
+    </div>;
   }
 }
