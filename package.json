@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "build": "tsc ./server/index.ts",
-    "dev": "node ./server/index.js",
+    "dev": "tsc-watch ./server/index.ts --lib esnext.asynciterable --outDir ./dist/server --onSuccess 'node ./dist/server/index.js' --onFailure 'echo Beep! Compilation Failed'",
     "start": "parcel index.html"
   },
   "repository": {
@@ -23,9 +22,6 @@
   },
   "homepage": "https://github.com/zxydaisy/storage#readme",
   "dependencies": {
-    "@types/graphql": "^0.13.3",
-    "@types/react": "^16.4.7",
-    "@types/react-dom": "^16.0.6",
     "apollo-cache-inmemory": "^1.1.5",
     "apollo-client": "^2.3.7",
     "apollo-link": "^1.2.1",
@@ -38,18 +34,26 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
     "graphql": "0.11.7",
+    "graphql-upload": "^8.0.0",
+    "material-ui-upload": "^1.2.1",
     "parcel-bundler": "^1.9.7",
     "react": "^16.4.2",
     "react-apollo": "^2.1.9",
     "react-dom": "^16.4.2",
     "subscriptions-transport-ws": "^0.9.14",
     "supervisor": "^0.12.0",
+    "tsc-watch": "^1.0.26",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.14.0",
     "typescript": "^3.0.1"
   },
   "devDependencies": {
-    "@types/node": "^10.5.5"
+    "@types/node": "^10.5.5",
+    "@types/express-graphql": "^0.6.2",
+    "@types/graphql": "^0.13.3",
+    "@types/react": "^16.4.7",
+    "@types/react-dom": "^16.0.6"
   }
 }
