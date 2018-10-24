@@ -1,20 +1,18 @@
-import {
-  graphql,
-  GraphQLSchema,
-  GraphQLObjectType,
-  GraphQLString
-} from 'graphql';
+import { makeExecutableSchema } from 'graphql-tools';
+import { GraphQLUpload } from 'graphql-upload';
 
-export const  schema = new GraphQLSchema({
-  query: new GraphQLObjectType({
-    name: 'RootQueryType',
-    fields: {
-      hello: {
-        type: GraphQLString,
-        resolve() {
-          return 'world';
-        }
-      }
-    }
-  })
-});
+const typeDefs = `
+  scalar Upload
+  type Query {
+    hello: String
+  }
+`;
+
+const resolvers = {
+  Upload: GraphQLUpload,
+  Query: {
+    hello: () => 'Hello world!',
+  },
+};
+
+export const schema = makeExecutableSchema({ typeDefs, resolvers });

@@ -4,15 +4,25 @@
 
 ## start project
 
+安装包
 ```
 yarn 
 
-yarn run build
-yarn run dev
-yarn run start
-
+```
+启动编译，ts 编译成 js
+```
+yarn run dev 
 ```
 
+开启服务
+```
+yarn run start
+```
+访问
+
+```
+  http://localhost:1234/
+```
 ## tech
 
 react + graphql + typescript
